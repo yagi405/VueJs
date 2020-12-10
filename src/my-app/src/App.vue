@@ -6,6 +6,9 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
+//コンポーネントの定義
+//export default はそのメンバーがモジュールの既定のメンバーであることを示す
+//モジュールはECMAScript2015の構文
 export default {
   name: 'App',
   components: {
@@ -14,7 +17,9 @@ export default {
 }
 </script>
 
+
 <style>
+/* コンポーネントのスタイル定義 */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

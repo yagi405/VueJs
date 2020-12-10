@@ -40,9 +40,18 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- 
+scoped属性の付いたstyle要素は、現在のコンポーネント配下だけで有効になる（Scoped CSS と呼ぶ）
+一般的には、アプリグローバルなスタイル定義は、cssとして別に定義するので、style要素にはscoped属性を付与するのが自然
+スタイル定義をコンポーネントにまとめたいならば、アプリグローバルなスタイル定義はルートコンポーネント（App.vue）にまとめても良い
+グローバルCSSとScoped CSSを1このvueファイルで同居させたいならば、style要素を複数記述してもOK
+※templateとscript要素は複数記述できない
+ -->
+
 <style scoped>
 h3 {
   margin: 40px 0 0;
+  background-color: Yellow;
 }
 ul {
   list-style-type: none;
