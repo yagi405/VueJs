@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <input type="button" v-on:click="ondecrement" value="-" />
+  {{count}}
+  <input type="button" v-on:click="onincrement" value="+" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  computed:{
+    count(){
+      return this.$store.state.count
+    },
+  },
+  methods:{
+    onincrement(){
+      this.$store.commit('increment')
+    },
+    ondecrement(){
+      this.$store.commit('decrement')
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
